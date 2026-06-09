@@ -82,7 +82,7 @@ Translated the approved business strategy into actionable requirements for the d
 ---
 
 ## 📋 Definition of Done (DoD)
-- [ ] Logic flow matches the approved [System Architecture diagram](../README.md).
+- [ ] Logic flow matches the approved [System Architecture diagram](https://github.com/cbonnin88/VoltShift/blob/main/System_Architecture_Diagram.png).
 - [ ] Code is peer-reviewed.
 - [ ] Passes all automated unit tests for edge cases (duplicate days, missed days).
 - [ ] Passes manual User Acceptance Testing (UAT).
