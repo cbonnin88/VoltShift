@@ -1,6 +1,6 @@
 # ⚡ VoltShift: User Retention & Revenue Strategy
 
-**Role:** Business Analyst / Business Data Analyst  
+**Role:** Business Analyst
 **Industry:** ClimateTech / Mobility SaaS  
 **Tech Stack:** Python, SQL (BigQuery), Looker Studio, Google Sheets, Agile (User Stories)
 
