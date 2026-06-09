@@ -49,7 +49,7 @@ Built a dynamic financial model to prove the business case for the engineering e
 * **Result:** Proved that investing $450 in rewards would yield over $1,200 in net profit (275% ROI) by saving users with a $15 Lifetime Value (LTV).
 
 ### Phase 5: Agile Requirements (User Stories)
-Translated the approved business strategy into actionable requirements for the development team using standard Agile formats.
+Translated the approved business strategy into actionable requirements for the development team using standard Agile formats:
 ## 📖 Description
 **As a** Free-tier user,
 **I want to** see a visual tracker of my consecutive logged trips on the dashboard,
