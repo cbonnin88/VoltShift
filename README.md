@@ -36,13 +36,13 @@ Wrote advanced SQL queries in BigQuery to identify the root cause of revenue lea
 * Calculated exact Monthly Revenue Lost due to churned users.
 * **File:** `retention_analysis.sql`
 
-### Phase 3: Executive BI Dashboard (Looker Studio)
+### Phase 3: [Executive BI Dashboard](https://datastudio.google.com/reporting/8c7804c8-2255-4812-8cf6-d0a3451def10)
 Designed a one-page interactive Looker Studio dashboard for Product and Executive stakeholders. 
 * Implemented cross-filtering for Country, Plan Tier, and Gender.
 * Created custom calculated metrics (e.g., Global Retention Rate %).
 * Visualized the drop-off curve and demographic heatmaps.
 
-### Phase 4: Financial ROI Modeling (Google Sheets)
+### Phase 4: [Financial ROI Modeling](https://docs.google.com/spreadsheets/d/1_Ip0TlahkA6a3X02wmPdjvmzCRSMt0Tz34ebAIG5k7c/edit?usp=sharing)
 Built a dynamic financial model to prove the business case for the engineering effort.
 * **Baseline vs. Target:** Modeled the financial impact of increasing Free tier retention from 20% to 35%.
 * **Cost Analysis:** Factored in the unit cost ($2.00) of subsidizing the partner cafe rewards.
@@ -50,7 +50,48 @@ Built a dynamic financial model to prove the business case for the engineering e
 
 ### Phase 5: Agile Requirements (User Stories)
 Translated the approved business strategy into actionable requirements for the development team using standard Agile formats.
-* *Example:* **As a** Free-tier user, **I want to** see a visual tracker of my consecutive logged trips, **So that** I know how close I am to earning my 7-day bonus reward.
+## 📖 Description
+**As a** Free-tier user,
+**I want to** see a visual tracker of my consecutive logged trips on the dashboard,
+**So that** I know how close I am to earning my 7-day bonus reward (500 GreenPoints).
+
+---
+
+## 🎯 Acceptance Criteria 
+
+- [ ] **Scenario 1: Standard Increment**
+  - **Given** the user logs a valid trip on consecutive calendar days,
+  - **When** the trip data is successfully saved,
+  - **Then** the streak counter increments by +1.
+
+- [ ] **Scenario 2: Same-Day Duplicate Check**
+  - **Given** the user has already logged a trip today,
+  - **When** they attempt to log a second trip,
+  - **Then** the trip data is saved, but the streak counter does NOT increment.
+
+- [ ] **Scenario 3: Broken Streak Reset**
+  - **Given** the user's last logged trip was more than 48 hours ago (missed a calendar day),
+  - **When** they log their next trip,
+  - **Then** the streak counter resets to 1.
+
+- [ ] **Scenario 4: Reward Distribution**
+  - **Given** the streak counter reaches 6,
+  - **When** the 7th consecutive trip is logged and saved,
+  - **Then** credit 500 GreenPoints to the user's wallet, trigger the "Reward Unlocked" UI animation, and reset the streak counter to 0.
+
+---
+
+## 📋 Definition of Done (DoD)
+- [ ] Logic flow matches the approved [System Architecture diagram](../README.md).
+- [ ] Code is peer-reviewed.
+- [ ] Passes all automated unit tests for edge cases (duplicate days, missed days).
+- [ ] Passes manual User Acceptance Testing (UAT).
+- [ ] UI is responsive on both iOS and Android views.
+
+---
+**Epic:** User Retention Optimization
+**Priority:** High
+**Estimated Effort:** 5 Story Points
 
 ### Phase 6: Process Mapping & UAT
 Created visual system logic flowcharts to map out edge cases (e.g., what happens if a user logs two trips in one day? What if they miss a day?). Authored a User Acceptance Testing (UAT) matrix to ensure bug-free deployment.
